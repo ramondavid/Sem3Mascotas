@@ -11,63 +11,59 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * Created by tomas vazquez on 23/01/2017.
+ * Created by tomas vazquez on 29/01/2017.
  */
 
-public class StarAdaptador extends RecyclerView.Adapter<StarAdaptador.StarMascotaViewHolder>{
+public class StarAdaptador extends RecyclerView.Adapter<StarAdaptador.StarAdaptadorViewHolder> {
 
-    public StarAdaptador(ArrayList<Mascotae> starmascota){
+    ArrayList<Mascota> starmascota;
+
+    public StarAdaptador(ArrayList<Mascota> starmascota){
         this.starmascota = starmascota;
+
     }
 
-    ArrayList<Mascotae> starmascota;
+
 
     @Override
-    public StarMascotaViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_mascota, parent, false);
+    public StarAdaptadorViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_mascota, parent,false);
 
-        return new StarMascotaViewHolder(v);
+        return new StarAdaptadorViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(StarMascotaViewHolder starmascotaholder, int position) {
+    public void onBindViewHolder(StarAdaptadorViewHolder staradaptadorViewHolder, int position) {
 
-       final Mascotae starMascotas = starmascota.get(position);
+        Mascota stars = starmascota.get(position);
 
-            starmascotaholder.cvImgMasc.setImageResource(starMascotas.getFoto());
-            starmascotaholder.cvtvNombre.setText(starMascotas.getNombre());
-            starmascotaholder.cvtvEdad.setText(starMascotas.getEdad());
-            starmascotaholder.cvtvTel.setText(starMascotas.getTelefono());
-            starmascotaholder.cvtvLikes.setText(starMascotas.getLikes());
-
-
+        staradaptadorViewHolder.cvImgMasc.setImageResource(stars.getFoto());
+        staradaptadorViewHolder.cvtvNombre.setText(stars.getNombre());
+        staradaptadorViewHolder.cvtvEdad.setText(stars.getEdad());
+        staradaptadorViewHolder.cvtvTel.setText(stars.getTelefono());
 
     }
 
     @Override
     public int getItemCount() {
-
-        return starmascota.size();
+        return 5;
     }
 
-    public static class StarMascotaViewHolder extends RecyclerView.ViewHolder {
+    public static class StarAdaptadorViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView cvImgMasc;
         private TextView cvtvNombre;
         private TextView cvtvEdad;
         private TextView cvtvTel;
-        private TextView cvtvLikes;
 
-        public StarMascotaViewHolder(View itemView) {
+        public StarAdaptadorViewHolder(View itemView) {
             super(itemView);
-
             cvImgMasc = (ImageView) itemView.findViewById(R.id.cvImgMasc);
-            cvtvNombre = (TextView) itemView.findViewById(R.id.tvNombre);
+            cvtvNombre = (TextView) itemView.findViewById(R.id.cvtvNombre);
             cvtvEdad = (TextView) itemView.findViewById(R.id.cvtvEdad);
             cvtvTel = (TextView) itemView.findViewById(R.id.cvtvTel);
-            cvtvLikes = (TextView) itemView.findViewById(R.id.cvtvLikes);
-        }
 
+        }
     }
 
 }

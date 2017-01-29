@@ -57,11 +57,11 @@ public class MainActivity extends AppCompatActivity {
     public void inicializarListaMascotas(){
         mascotas = new ArrayList<Mascota>();
 
-        mascotas.add(new Mascota(R.drawable.mascota1,getResources().getString(R.string.tvMascota1),getResources().getString(R.string.tvMas1Edad),getResources().getString(R.string.tvTelContactoMas1)));
-        mascotas.add(new Mascota(R.drawable.mascota2,getResources().getString(R.string.tvMascota2),getResources().getString(R.string.tvMas2Edad),getResources().getString(R.string.tvTelContactoMas2)));
-        mascotas.add(new Mascota(R.drawable.mascota3,getResources().getString(R.string.tvMascota3),getResources().getString(R.string.tvMas3Edad),getResources().getString(R.string.tvTelContactoMas3)));
-        mascotas.add(new Mascota(R.drawable.mascota4,getResources().getString(R.string.tvMascota4),getResources().getString(R.string.tvMas4Edad),getResources().getString(R.string.tvTelContactoMas4)));
-        mascotas.add(new Mascota(R.drawable.mascota5,getResources().getString(R.string.tvMascota5),getResources().getString(R.string.tvMas5Edad),getResources().getString(R.string.tvTelContactoMas5)));
+        mascotas.add(new Mascota(R.drawable.mascota1,getResources().getString(R.string.tvMascota1),getResources().getString(R.string.tvMas1Edad),getResources().getString(R.string.tvTelContactoMas1), (byte) 0));
+        mascotas.add(new Mascota(R.drawable.mascota2,getResources().getString(R.string.tvMascota2),getResources().getString(R.string.tvMas2Edad),getResources().getString(R.string.tvTelContactoMas2), (byte) 0));
+        mascotas.add(new Mascota(R.drawable.mascota3,getResources().getString(R.string.tvMascota3),getResources().getString(R.string.tvMas3Edad),getResources().getString(R.string.tvTelContactoMas3), (byte) 0));
+        mascotas.add(new Mascota(R.drawable.mascota4,getResources().getString(R.string.tvMascota4),getResources().getString(R.string.tvMas4Edad),getResources().getString(R.string.tvTelContactoMas4), (byte) 0));
+        mascotas.add(new Mascota(R.drawable.mascota5,getResources().getString(R.string.tvMascota5),getResources().getString(R.string.tvMas5Edad),getResources().getString(R.string.tvTelContactoMas5), (byte) 0));
 
     }
 
@@ -77,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.mStar:
                 Intent intent = new Intent(this, StarMascotas.class);
-
                 startActivity(intent);
                 break;
         }

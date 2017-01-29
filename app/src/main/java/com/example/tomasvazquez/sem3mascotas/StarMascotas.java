@@ -13,7 +13,8 @@ import static com.example.tomasvazquez.sem3mascotas.R.id.rvStarMascotas;
 
 public class StarMascotas extends AppCompatActivity {
 
-    ArrayList<Mascotae> starmascotas;
+
+    ArrayList<Mascota> starmascota;
     private RecyclerView listaStarMascotas;
 
     @Override
@@ -21,35 +22,37 @@ public class StarMascotas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_star_mascotas);
 
-        Toolbar miActionBar = (Toolbar)findViewById(R.id.miActionBar);
+        Toolbar miActionBar = (Toolbar) findViewById(R.id.miActionBar);
         setSupportActionBar(miActionBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        listaStarMascotas = (RecyclerView) findViewById(rvStarMascotas);
+        listaStarMascotas = (RecyclerView) findViewById(R.id.rvStarMascotas);
+
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
-
         listaStarMascotas.setLayoutManager(llm);
-        inicializarListaStarMascotas();
-        inicializarAdaptador();
 
+        inicializarListaStarMascotas();
+        inicializarStarAdaptador();
     }
 
-    public StarAdaptador adaptador;
-
-    public void inicializarAdaptador(){
-        StarAdaptador adaptador = new StarAdaptador(starmascotas);
+    public void inicializarStarAdaptador(){
+        StarAdaptador adaptador = new StarAdaptador(starmascota);
         listaStarMascotas.setAdapter(adaptador);
     }
 
-    public void inicializarListaStarMascotas(){
-        starmascotas = new ArrayList<Mascotae>();
 
-            starmascotas.add(new Mascotae(R.drawable.mascota1, getResources().getString(R.string.tvMascota1), getResources().getString(R.string.tvMas1Edad), getResources().getString(R.string.tvTelContactoMas1), (byte) 0));
-            starmascotas.add(new Mascotae(R.drawable.mascota2, getResources().getString(R.string.tvMascota2), getResources().getString(R.string.tvMas2Edad), getResources().getString(R.string.tvTelContactoMas2), (byte) 0));
-            starmascotas.add(new Mascotae(R.drawable.mascota3, getResources().getString(R.string.tvMascota3), getResources().getString(R.string.tvMas3Edad), getResources().getString(R.string.tvTelContactoMas3), (byte) 0));
-            starmascotas.add(new Mascotae(R.drawable.mascota4, getResources().getString(R.string.tvMascota4), getResources().getString(R.string.tvMas4Edad), getResources().getString(R.string.tvTelContactoMas4), (byte) 0));
-            starmascotas.add(new Mascotae(R.drawable.mascota5, getResources().getString(R.string.tvMascota5), getResources().getString(R.string.tvMas5Edad), getResources().getString(R.string.tvTelContactoMas5), (byte) 0));
+    public void inicializarListaStarMascotas(){
+        starmascota = new ArrayList<Mascota>();
+
+        starmascota.add(new Mascota(R.drawable.mascota1,getResources().getString(R.string.tvMascota1),getResources().getString(R.string.tvMas1Edad),getResources().getString(R.string.tvTelContactoMas1), (byte) 0));
+        starmascota.add(new Mascota(R.drawable.mascota2,getResources().getString(R.string.tvMascota2),getResources().getString(R.string.tvMas2Edad),getResources().getString(R.string.tvTelContactoMas2), (byte) 0));
+        starmascota.add(new Mascota(R.drawable.mascota3,getResources().getString(R.string.tvMascota3),getResources().getString(R.string.tvMas3Edad),getResources().getString(R.string.tvTelContactoMas3), (byte) 0));
+        starmascota.add(new Mascota(R.drawable.mascota4,getResources().getString(R.string.tvMascota4),getResources().getString(R.string.tvMas4Edad),getResources().getString(R.string.tvTelContactoMas4), (byte) 0));
+        starmascota.add(new Mascota(R.drawable.mascota5,getResources().getString(R.string.tvMascota5),getResources().getString(R.string.tvMas5Edad),getResources().getString(R.string.tvTelContactoMas5), (byte) 0));
+
     }
 
+
 }
+
