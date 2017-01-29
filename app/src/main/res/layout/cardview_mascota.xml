@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvMascota"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    card_view:cardCornerRadius="@dimen/corner_radious_cardbiew"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark"
+        >
+
+        <ImageView
+            android:id="@+id/cvImgMasc"
+            android:layout_width="@dimen/cardview_Imagen"
+            android:layout_height="@dimen/cardview_Imagen"
+            android:src="@drawable/mascota1"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <ImageButton
+                android:id="@+id/btnLike"
+                android:layout_width="@dimen/icon_Like"
+                android:layout_height="@dimen/icon_Like"
+                android:background="@drawable/dog_bone"
+                android:layout_gravity="right"
+
+                />
+            
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                >
+                <TextView
+                    android:id="@+id/cvtvNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvMascota1"
+                    android:textSize="@dimen/cardview_Nombre"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorPrimaryText"
+                    />
+
+                <TextView
+                    android:id="@+id/cvtvEdad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvMas1Edad"
+                    android:textSize="@dimen/dimenDetalles"
+                    />
+                <TextView
+                    android:id="@+id/cvtvTel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvTelContactoMas1"
+                    android:textSize="@dimen/dimenDetalles"
+                    />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgContador"
+                android:layout_width="@dimen/icon_Like"
+                android:layout_height="@dimen/icon_Like"
+                android:background="@drawable/dog_bone_like"
+                android:layout_gravity="end"
+                android:layout_marginLeft="@dimen/dimenLikes"
+                />
+            <TextView
+                android:id="@+id/cvtvLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/likes"
+                android:textSize="@dimen/dimenLikes"
+                android:textColor="@color/colorAccent"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Mascotas</string>
+    <string name="tvMascota1">Atenea</string>
+    <string name="tvMascota2">Zeus</string>
+    <string name="tvMascota3">Artemisa</string>
+    <string name="tvMascota4">Poseidon</string>
+    <string name="tvMascota5">Hades</string>
+    <string name="tvMas1Edad">5 años</string>
+    <string name="tvMas2Edad">4 años</string>
+    <string name="tvMas3Edad">3 años</string>
+    <string name="tvMas4Edad">2 años</string>
+    <string name="tvMas5Edad">1 años</string>
+    <string name="tvTelContactoMas1">1111-1111</string>
+    <string name="tvTelContactoMas2">2222-2222</string>
+    <string name="tvTelContactoMas3">3333-3333</string>
+    <string name="tvTelContactoMas4">4444-4444</string>
+    <string name="tvTelContactoMas5">5555-5555</string>
+    <string name="likes">0</string>
+    <string name="menuStar">Star</string>
+</resources>
